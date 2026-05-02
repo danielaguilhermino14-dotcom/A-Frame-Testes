@@ -1,0 +1,23 @@
+<!-- index.html -->
+<script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+
+AFRAME.registerComponent('carro', {
+    init: function(keys){}
+    tick: function(position; rotation.y){}
+})
+<a-scene>
+  <!-- O carro -->
+  <a-entity
+    id="carro"
+    car-controller
+    position="0 0.5 0">
+
+    <!-- Corpo do carro -->
+    <a-box color="#e74c3c" width="2" height="0.6" depth="1"></a-box>
+
+    <!-- Câmera segue o carro -->
+    <a-camera position="0 2 5" look-controls="false"></a-camera>
+  </a-entity>
+
+  <a-plane rotation="-90 0 0" width="50" height="50" color="#888"></a-plane>
+</a-scene>
